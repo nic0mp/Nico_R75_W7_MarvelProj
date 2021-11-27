@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles} from '@mui/styles';
 import { Button } from '@mui/material';
-import drone_image from '../../assets/images/sample_drone_image.jpg'
+import marvelcover_image from '../../assets/images/marvelcover.jpg'
 import {Link} from 'react-router-dom';
 
 interface Props{
@@ -38,7 +38,7 @@ const useStyles = makeStyles({
         color: 'black'
     },
     main:{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${drone_image});`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${marvelcover_image});`,
         width: '100%',
         height: '100%',
         backgroundSize: 'cover',
@@ -66,7 +66,7 @@ export const Home = ( props:Props) =>{
             <nav>
                 <div className={classes.navbar_container}>
                     <h1 className={`${classes.logo}`}>
-                        <a href="#" className={`${classes.logo_a} ${classes.logo_navigation}`}>Ranger Drones</a>
+                        <a href="#" className={`${classes.logo_a} ${classes.logo_navigation}`}>Marvel Heroes</a>
                     </h1>
 
                     <ul className={`${classes.navigation} ${classes.logo_navigation}`}>
@@ -85,7 +85,7 @@ export const Home = ( props:Props) =>{
             <main className={classes.main}>
                 <div className={classes.main_text}>
                     <h1>{props.title}</h1>
-                    <p>Drones are Kewl</p>
+                    <p>Let's Go!</p>
                     <Button color='primary' variant='contained'>Click Me</Button>
                 </div>
 
