@@ -25,7 +25,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import clsx from 'clsx';
 import { RouteComponentProps, withRouter, Switch, Route } from "react-router-dom";
-import {DataTable, DroneForm} from '../../components';
+import {DataTable, HeroForm} from '../../components';
 
 // import { width } from '@mui/system';
 // import { ChevronRight } from '@mui/icons-material';
@@ -108,6 +108,7 @@ export const Dashboard = withRouter((props:DashProps) => {
     const {history} = props;
     const classes = useStyles();
     const theme = useTheme();
+    
     const [open, setOpen] = useState(false);
     const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -162,7 +163,7 @@ export const Dashboard = withRouter((props:DashProps) => {
                         <DialogTitle id='form-dialog-title'>Add New Hero</DialogTitle>
                         <DialogContent>
                             <DialogContentText>Fill the form to add Drone</DialogContentText>
-                            <DroneForm/>
+                            <HeroForm/>
                         </DialogContent>
                         <DialogActions>
                             <Button onClick={handleDialogClickClose}>Cancel</Button>

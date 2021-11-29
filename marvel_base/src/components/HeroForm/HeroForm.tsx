@@ -19,7 +19,7 @@ interface HeroState {
     price: string;
 }
 
-export const DroneForm = (props:HeroFormProps) =>{
+export const HeroForm = (props:HeroFormProps) =>{
     const dispatch = useDispatch()
     const store  = useStore()
     let {heroData, getData} = useGetData();

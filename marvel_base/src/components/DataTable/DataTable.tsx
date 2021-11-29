@@ -1,18 +1,21 @@
-import react from 'react'
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import React, {useState} from 'react'
+import { DataGrid, GridColDef, GridSelectionModel } from '@mui/x-data-grid';
 import {server_calls} from '../../api';
 import { useGetData } from '../../custom-hooks';
+import { Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle
+} from "@mui/material";
+import {HeroForm} from '../../components'
 
-interface gridData{
-  data:{
-    id?:string;
-  }
-}
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 140 },
-    { field: 'price', headerName: 'Price', width: 130 },
-    { field: 'name', headerName: 'Drone name', width: 130 },
+    { field: 'realName', headerName: 'Real Name', width: 130 },
+    { field: 'name', headerName: 'Hero name', width: 130 },
     {
       field: 'cost_of_production',
       headerName: 'Production Cost',
@@ -35,6 +38,7 @@ const columns: GridColDef[] = [
       id?:string;
     }
   }
+  
 
   export const DataTable = () =>{
     let {heroData, getData} = useGetData();
@@ -43,6 +47,10 @@ const columns: GridColDef[] = [
 
     let handleOpen = ()=> {
       setOpen(true)
+    }
+
+    let handleClose = ()=> {
+      setOpen(false)
     }
 
     let deleteData = async () =>{
@@ -68,10 +76,10 @@ const columns: GridColDef[] = [
               <DialogTitle id='form-dialog-title'></DialogTitle>
               <DialogContent>
                 <DialogContentText>Updating: {gridData[0]}</DialogContentText>
-                  <DroneForm id = {`${gridData[0]}`}></DroneForm>
+                  <HeroForm id = {`${gridData[0]}`}></HeroForm>
               </DialogContent>
               <DialogActions>
-                <Button onClick={handleClose} style={{backgroundColor:'maroon'}}Cancel></Button>
+                <Button onClick={handleClose} style={{backgroundColor:'maroon'}}>Cancel</Button>
               </DialogActions>
             </Dialog>
           </div>
