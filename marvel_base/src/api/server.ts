@@ -24,7 +24,7 @@ export const server_calls = {
             body: JSON.stringify(data)
         });
         if(!response.ok){
-            throw new Error('Failed to create a new drone')
+            throw new Error('Failed to create a new hero')
         }
         return await response.json() 
     },
@@ -39,7 +39,7 @@ export const server_calls = {
             body: JSON.stringify(data)
         });
         if(!response.ok){
-            throw new Error('Failed to update a new drone')
+            throw new Error('Failed to update a new hero')
         }
         return await response.json() 
     },
@@ -54,7 +54,7 @@ export const server_calls = {
            
         });
         if(!response.ok){
-            throw new Error('Failed to delete a new drone')
+            throw new Error('Failed to delete a new hero')
         }
         return await response.json() 
     }

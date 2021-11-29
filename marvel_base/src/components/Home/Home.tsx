@@ -74,7 +74,7 @@ export const Home = ( props:Props) =>{
                             <Link to='/' className={classes.nav_a}>Home</Link>
                         </li>
                         <li>
-                            <Link to='/dashboard' className={classes.nav_a}>About</Link>
+                            <Link to='/dashboard' className={classes.nav_a}>Dashboard</Link>
                         </li>
                         <li>    
                             <Link to='/signin' className={classes.nav_a}>Learn More</Link>
@@ -82,6 +82,7 @@ export const Home = ( props:Props) =>{
                     </ul>
                 </div>
             </nav>
+            
             <main className={classes.main}>
                 <div className={classes.main_text}>
                     <h1>{props.title}</h1>

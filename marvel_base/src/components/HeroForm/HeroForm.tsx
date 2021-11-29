@@ -22,7 +22,7 @@ interface HeroState {
 export const DroneForm = (props:HeroFormProps) =>{
     const dispatch = useDispatch()
     const store  = useStore()
-    let {droneData, getData} = useGetData();
+    let {heroData, getData} = useGetData();
     const name = useSelector<HeroState>(state => state.name)
     const price = useSelector<HeroState>(state => state.price)
     const { register, handleSubmit } = useForm({})

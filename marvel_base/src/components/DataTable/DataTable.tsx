@@ -37,7 +37,7 @@ const columns: GridColDef[] = [
   }
 
   export const DataTable = () =>{
-    let {droneData, getData} = useGetData();
+    let {heroData, getData} = useGetData();
     let [open, setOpen] = useState(false);
     let [gridData, setData] = useState<GridSelectionModel>([])
 
@@ -55,12 +55,12 @@ const columns: GridColDef[] = [
 
       return(
           <div style={{height: 400, width: '100%' }}>
-            <h2>Drones in Inventory</h2>
-            <DataGrid rows={droneData} columns={columns} 
+            <h2>Heroess in Database</h2>
+            <DataGrid rows={heroData} columns={columns} 
                       pageSize={5} 
                       checkboxSelection
                       onSelectionModelChange={(newSelectionModel) => { setData(newSelectionModel);}} 
-                      {...droneData}
+                      {...heroData}
                       />
             <Button onClick={handleOpen}>Update</Button>
             <Button variant='contained' color='secondary' onClick={deleteData}>Delete</Button>

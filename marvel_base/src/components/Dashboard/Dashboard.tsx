@@ -108,7 +108,6 @@ export const Dashboard = withRouter((props:DashProps) => {
     const {history} = props;
     const classes = useStyles();
     const theme = useTheme();
-
     const [open, setOpen] = useState(false);
     const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -158,9 +157,9 @@ export const Dashboard = withRouter((props:DashProps) => {
                     </Typography>
                     <Button className={classes.toolbar_button} 
                         onClick={handleDialogClickOpen} 
-                        style={{backgroundColor: 'whitesmoke', marginLeft:'auto'}}>Create New Button</Button>
+                        style={{backgroundColor: 'whitesmoke', marginLeft:'auto'}}>Create New Hero</Button>
                     <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby='form-dialog-title'>
-                        <DialogTitle id='form-dialog-title'>Add New Drone</DialogTitle>
+                        <DialogTitle id='form-dialog-title'>Add New Hero</DialogTitle>
                         <DialogContent>
                             <DialogContentText>Fill the form to add Drone</DialogContentText>
                             <DroneForm/>
