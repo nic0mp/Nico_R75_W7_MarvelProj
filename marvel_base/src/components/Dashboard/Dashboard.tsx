@@ -108,7 +108,7 @@ export const Dashboard = withRouter((props:DashProps) => {
     const {history} = props;
     const classes = useStyles();
     const theme = useTheme();
-    
+
     const [open, setOpen] = useState(false);
     const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -162,7 +162,7 @@ export const Dashboard = withRouter((props:DashProps) => {
                     <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby='form-dialog-title'>
                         <DialogTitle id='form-dialog-title'>Add New Hero</DialogTitle>
                         <DialogContent>
-                            <DialogContentText>Fill the form to add Drone</DialogContentText>
+                            <DialogContentText>Fill the form to add Hero</DialogContentText>
                             <HeroForm/>
                         </DialogContent>
                         <DialogActions>

@@ -17,14 +17,14 @@ const columns: GridColDef[] = [
     { field: 'realName', headerName: 'Real Name', width: 130 },
     { field: 'name', headerName: 'Hero name', width: 130 },
     {
-      field: 'cost_of_production',
-      headerName: 'Production Cost',
+      field: 'first_appearance',
+      headerName: '1st Appearance',
       type: 'number',
       width: 140,
     },
     {
-      field: 'series',
-      headerName: 'Series',
+      field: 'books_series',
+      headerName: 'Book Series',
       description: 'This is for the drones',
       sortable: false,
       width: 160,

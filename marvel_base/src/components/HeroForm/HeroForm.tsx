@@ -47,28 +47,32 @@ export const HeroForm = (props:HeroFormProps) =>{
         <div>
             <form onSubmit = {handleSubmit(onSubmit)}>
                 <div>
-                    <label htmlFor="name">Drone Name</label>
+                    <label htmlFor="name">Hero Name</label>
                     <Input {...register('name')} name="name" placeholder='Name' />
                 </div>
                 <div>
-                    <label htmlFor="price">Price</label>
-                    <Input {...register('price')} name="price" placeholder="Price"/>
+                    <label htmlFor="real_name">Real Name</label>
+                    <Input {...register('real_name')} name="real_name" placeholder="Real Name"/>
                 </div>
                 <div>
-                    <label htmlFor="camera_quality">Camera Quality</label>
-                    <Input {...register('camera_quality')} name="camera_quality" placeholder="Camera Quality"/>
+                    <label htmlFor="powers_abilities">Powers and Abilities</label>
+                    <Input {...register('powers_abilities')} name="powers_abilities" placeholder="Powers and Abilities"/>
                 </div>
                 <div>
-                    <label htmlFor="flight_time">Flight Time</label>
-                    <Input {...register('flight_time')} name="flight_time" placeholder="Flight Time"/>
+                    <label htmlFor="first_appearance">First Appearance</label>
+                    <Input {...register('first_appearance')} name="first_appearance" placeholder="First Appearancen"/>
+                </div>
+                <div>
+                    <label htmlFor="books_series">Books and Series</label>
+                    <Input {...register('books_series')} name="books_series" placeholder="Books and Series"/>
                 </div>
                 <div>
                     <label htmlFor="description">Description</label>
                     <Input {...register('description')} name="description" placeholder="Description"/>
                 </div>
                 <div>
-                    <label htmlFor="dimensions">Dimensions</label>
-                    <Input {...register('dimensions')} name="dimensions" placeholder="Dimensions"/>
+                    <label htmlFor="teams">Teams</label>
+                    <Input {...register('teams')} name="teams" placeholder="Teams"/>
                 </div>
                 <div>
                     <label htmlFor="max_speed">Max Speed</label>
@@ -78,14 +82,7 @@ export const HeroForm = (props:HeroFormProps) =>{
                     <label htmlFor="weight">Weight</label>
                     <Input {...register('weight')} name="weight" placeholder="Weight"/>
                 </div>
-                <div>
-                    <label htmlFor="cost_of_production">Cost Of Production</label>
-                    <Input {...register('cost_of_production')} name="cost_of_production" placeholder="cost_of_production"/>
-                </div>
-                <div>
-                    <label htmlFor="series">Series</label>
-                    <Input {...register('series')} name="series" placeholder="Series"/>
-                </div>
+               
                 <Button type='submit'>Submit</Button>
             </form>
         </div>
